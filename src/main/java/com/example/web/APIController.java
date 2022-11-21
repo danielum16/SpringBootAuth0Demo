@@ -19,17 +19,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 public class APIController {
 
-	public static void main(String[] args) {
-		SpringApplication.run(APIController.class, args);
-	}
-
-	// debug
-	// @GetMapping(value = "/public")
-	// public Resp publicEndpoint() {
-	// return new Resp("All good. You DO NOT need to be authenticated to
-	// call/api/public.");
-	// }
-
 	@GetMapping(value = "/private")
 	public Resp privateEndpoint() {
 		return new Resp("All good. You can see this because you are Authenticated.");
